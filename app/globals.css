@@ -1,0 +1,284 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
+    "Droid Sans", "Helvetica Neue", sans-serif;
+  font-weight: 500;
+}
+
+/* Enhanced Glass Morphism with Neon */
+.glass-neon-card {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(6, 182, 212, 0.2);
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  position: relative;
+}
+
+/* Neon Pulse Border Animation */
+.neon-pulse-border {
+  border: 2px solid transparent;
+  background: linear-gradient(rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.03)) padding-box,
+    linear-gradient(45deg, #06b6d4, #8b5cf6, #06b6d4, #8b5cf6) border-box;
+  animation: neon-pulse-enhanced 3s ease-in-out infinite;
+}
+
+@keyframes neon-pulse-enhanced {
+  0%,
+  100% {
+    box-shadow: 0 0 20px rgba(6, 182, 212, 0.4), 0 0 40px rgba(139, 92, 246, 0.2);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(139, 92, 246, 0.6), 0 0 60px rgba(6, 182, 212, 0.3);
+  }
+}
+
+/* Neon Glow Border */
+.neon-glow-border {
+  box-shadow: 0 0 30px rgba(139, 92, 246, 0.3), inset 0 0 30px rgba(6, 182, 212, 0.1);
+  animation: glow-pulse 2s ease-in-out infinite alternate;
+}
+
+@keyframes glow-pulse {
+  0% {
+    box-shadow: 0 0 20px rgba(139, 92, 246, 0.3), inset 0 0 20px rgba(6, 182, 212, 0.1);
+  }
+  100% {
+    box-shadow: 0 0 40px rgba(139, 92, 246, 0.5), inset 0 0 40px rgba(6, 182, 212, 0.2);
+  }
+}
+
+/* Enhanced Floating Animation */
+.floating-card-enhanced {
+  animation: float-enhanced 4s ease-in-out infinite;
+}
+
+@keyframes float-enhanced {
+  0%,
+  100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  25% {
+    transform: translateY(-8px) rotate(0.5deg);
+  }
+  50% {
+    transform: translateY(-12px) rotate(0deg);
+  }
+  75% {
+    transform: translateY(-8px) rotate(-0.5deg);
+  }
+}
+
+/* Space-Tech Particles */
+.particles-space {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.particle-space {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  background: radial-gradient(circle, rgba(6, 182, 212, 0.8) 0%, rgba(139, 92, 246, 0.4) 50%, transparent 100%);
+  border-radius: 50%;
+  animation: particle-space-float linear infinite;
+}
+
+.particle-space:nth-child(3n) {
+  background: radial-gradient(circle, rgba(139, 92, 246, 0.8) 0%, rgba(6, 182, 212, 0.4) 50%, transparent 100%);
+  width: 2px;
+  height: 2px;
+}
+
+.particle-space:nth-child(5n) {
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.6) 0%, rgba(6, 182, 212, 0.3) 50%, transparent 100%);
+  width: 1.5px;
+  height: 1.5px;
+}
+
+@keyframes particle-space-float {
+  0% {
+    transform: translateY(100vh) translateX(0) scale(0);
+    opacity: 0;
+  }
+  5% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  95% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100px) translateX(200px) scale(0);
+    opacity: 0;
+  }
+}
+
+/* Gradient Text with Shine Effect */
+.gradient-text-shine {
+  background: linear-gradient(45deg, #06b6d4 0%, #8b5cf6 25%, #06b6d4 50%, #8b5cf6 75%, #06b6d4 100%);
+  background-size: 300% 100%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shine-gradient 4s linear infinite;
+}
+
+@keyframes shine-gradient {
+  0% {
+    background-position: -300% 0;
+  }
+  100% {
+    background-position: 300% 0;
+  }
+}
+
+/* Neon Text Glow */
+.neon-text-glow {
+  text-shadow: 0 0 10px rgba(139, 92, 246, 0.8), 0 0 20px rgba(139, 92, 246, 0.6), 0 0 30px rgba(139, 92, 246, 0.4);
+  animation: text-glow-pulse 2s ease-in-out infinite alternate;
+}
+
+@keyframes text-glow-pulse {
+  0% {
+    text-shadow: 0 0 10px rgba(139, 92, 246, 0.8), 0 0 20px rgba(139, 92, 246, 0.6), 0 0 30px rgba(139, 92, 246, 0.4);
+  }
+  100% {
+    text-shadow: 0 0 15px rgba(139, 92, 246, 1), 0 0 30px rgba(139, 92, 246, 0.8), 0 0 45px rgba(139, 92, 246, 0.6);
+  }
+}
+
+/* Holographic Timer */
+.holographic-timer {
+  font-family: "Courier New", monospace;
+  color: #06b6d4;
+  text-shadow: 0 0 10px rgba(6, 182, 212, 0.8), 0 0 20px rgba(6, 182, 212, 0.6), 0 0 30px rgba(6, 182, 212, 0.4);
+  letter-spacing: 0.2em;
+  animation: holographic-flicker 3s ease-in-out infinite;
+}
+
+@keyframes holographic-flicker {
+  0%,
+  100% {
+    opacity: 1;
+    text-shadow: 0 0 10px rgba(6, 182, 212, 0.8), 0 0 20px rgba(6, 182, 212, 0.6), 0 0 30px rgba(6, 182, 212, 0.4);
+  }
+  50% {
+    opacity: 0.95;
+    text-shadow: 0 0 15px rgba(6, 182, 212, 1), 0 0 30px rgba(6, 182, 212, 0.8), 0 0 45px rgba(6, 182, 212, 0.6);
+  }
+}
+
+/* Enhanced CTA Button */
+.cta-button-enhanced {
+  background: linear-gradient(45deg, #06b6d4, #8b5cf6, #06b6d4);
+  background-size: 300% 100%;
+  border: none;
+  box-shadow: 0 0 30px rgba(139, 92, 246, 0.5), 0 10px 30px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+  animation: cta-pulse-glow 2s ease-in-out infinite alternate;
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-button-enhanced::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s;
+}
+
+.cta-button-enhanced:hover::before {
+  left: 100%;
+}
+
+.cta-button-enhanced:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 0 50px rgba(139, 92, 246, 0.8), 0 15px 40px rgba(0, 0, 0, 0.4);
+  background-position: 100% 0;
+}
+
+@keyframes cta-pulse-glow {
+  0% {
+    box-shadow: 0 0 20px rgba(139, 92, 246, 0.5), 0 10px 30px rgba(0, 0, 0, 0.3);
+  }
+  100% {
+    box-shadow: 0 0 40px rgba(6, 182, 212, 0.8), 0 10px 30px rgba(0, 0, 0, 0.3);
+  }
+}
+
+/* Mobile CTA Button */
+.cta-button-mobile {
+  background: linear-gradient(45deg, #06b6d4, #8b5cf6);
+  border: none;
+  box-shadow: 0 0 25px rgba(139, 92, 246, 0.6), 0 5px 20px rgba(0, 0, 0, 0.3);
+  animation: mobile-pulse 2s ease-in-out infinite alternate;
+}
+
+@keyframes mobile-pulse {
+  0% {
+    box-shadow: 0 0 20px rgba(139, 92, 246, 0.6), 0 5px 20px rgba(0, 0, 0, 0.3);
+  }
+  100% {
+    box-shadow: 0 0 35px rgba(6, 182, 212, 0.8), 0 5px 20px rgba(0, 0, 0, 0.3);
+  }
+}
+
+/* Neon Icon Wrapper */
+.neon-icon-wrapper {
+  filter: drop-shadow(0 0 10px rgba(6, 182, 212, 0.5));
+}
+
+/* Guarantee Seal */
+.guarantee-seal {
+  animation: seal-rotate 10s linear infinite;
+  filter: drop-shadow(0 0 20px rgba(34, 197, 94, 0.5));
+}
+
+@keyframes seal-rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Responsive Optimizations */
+@media (max-width: 768px) {
+  .particle-space {
+    width: 0.5px;
+    height: 0.5px;
+  }
+
+  .glass-neon-card {
+    backdrop-filter: blur(10px);
+  }
+
+  .floating-card-enhanced {
+    animation-duration: 6s;
+  }
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Prevent text selection on interactive elements */
+button,
+.cta-button-enhanced,
+.cta-button-mobile {
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+}
