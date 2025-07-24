@@ -233,7 +233,7 @@ export default function EnxaquecaLanding() {
             asChild
             className="cta-button-enhanced text-xl md:text-2xl px-8 md:px-16 py-6 md:py-8 rounded-full font-bold group"
           >
-            <a href="https://checkout.com/exemplo" target="_blank" rel="noopener noreferrer">
+            <a href="https://go.tribopay.com.br/kounzjibvx" target="_blank" rel="noopener noreferrer">
               <span className="flex items-center gap-3">
                 🚀 Começar Agora o Desafio Sem Dor!
                 <ArrowRight className="w-6 h-6 group-hover:translate-x-2 transition-transform duration-300" />
@@ -368,7 +368,7 @@ export default function EnxaquecaLanding() {
       {/* Fixed Mobile CTA */}
       <div className="fixed bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-slate-900 via-slate-900/95 to-transparent md:hidden z-50 backdrop-blur-sm">
         <Button asChild className="cta-button-mobile w-full text-lg py-4 rounded-full font-bold">
-          <a href="https://checkout.com/exemplo" target="_blank" rel="noopener noreferrer">
+          <a href="https://go.tribopay.com.br/kounzjibvx" target="_blank" rel="noopener noreferrer">
             🚀 Começar Agora - R$19,90
           </a>
         </Button>
